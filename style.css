@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.board {
+    width: 1000px;
+    height: 700px;
+    background-image: url(img/bg.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+.pet {
+    position: absolute;
+    height: 61px;
+    width: 80px;
+    background-image: url(img/pet.png);
+
+    /* background-color: red; */
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: bottom;
+    transition:  transform .2s linear;
+    transition-property: transform, top;
+    z-index: 10;
+}
+.pet.left {
+    transform: scale(1,1);
+}
+.pet.right {
+    transform: scale(-1,1);
+}
+.plBlock {
+    /* background-color: #f004; */
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+.platform {
+    /* background-color: red; */
+    position: absolute;
+    background-image: url(img/pl.png);
+    width: 100px;
+    height: 50px;
+    background-size: contain;
+    transition: transform .5s linear;
+}
